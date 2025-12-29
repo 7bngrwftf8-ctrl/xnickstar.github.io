@@ -243,3 +243,4 @@ Inspired by premium fintech design patterns from Chip.uk and modern portfolio be
 This is a static site - no backend, no database, just clean HTML/CSS/JS. Perfect for showcasing your work without complexity.
 
 Good luck with your portfolio!
+
