@@ -1,20 +1,29 @@
 # Portfolio Website
 
-A clean, minimal portfolio website built with HTML, CSS, and vanilla JavaScript.
+A premium dark mode portfolio website with deep navy & gold color scheme, built with HTML, CSS, and vanilla JavaScript.
 
-## Features
+## Design Features
 
-- Responsive design (works on mobile, tablet, desktop)
-- Smooth scrolling navigation
-- Modal popups for project details
-- Clean, professional styling
-- No frameworks needed - just pure HTML/CSS/JS
+- **Deep Navy & Gold Dark Mode** - Professional color scheme with vibrant gold accents
+- **Two-column layouts** - Image-heavy sections inspired by premium fintech design
+- **Dark/Light section balance** - Alternating backgrounds for visual rhythm
+- **Responsive design** - Works beautifully on mobile, tablet, and desktop
+- **Smooth animations** - Hover effects, transitions, and modal interactions
+- **No frameworks** - Pure HTML/CSS/JS for fast loading
+
+## Color Palette
+
+- **Deep Navy:** `#0a1628` (primary dark)
+- **Navy Blue:** `#1e3a5f` (mid-tone backgrounds)
+- **Vibrant Gold:** `#fbbf24` (accent, buttons, highlights)
+- **Light Gold:** `#fcd34d` (hover states)
+- **Slate:** `#0f172a` (dark section backgrounds)
 
 ## Files
 
-- `index.html` - Main HTML structure
-- `styles.css` - All styling and layout
-- `script.js` - Interactive functionality (modals, smooth scrolling)
+- `index.html` - Main HTML structure with featured projects and about section
+- `styles.css` - All styling with dark mode color scheme
+- `script.js` - Interactive functionality (modals, smooth scrolling, animations)
 
 ## Customization Guide
 
@@ -22,191 +31,215 @@ A clean, minimal portfolio website built with HTML, CSS, and vanilla JavaScript.
 
 **In `index.html`:**
 
-Line 7: Update page title
+**Hero Section (lines 17-48):**
+- Line 20: Change badge text from "✨ Open to New Projects"
+- Line 21: Update your name and tagline
+- Line 22: Modify subtitle
+- Lines 25-35: Update stats (Years Experience, Engagement %, Campaigns)
+
+**Featured Projects (lines 52-115):**
+Each featured project has:
+- Project image placeholder with upload instructions
+- Project label, title, and description
+- Highlight metrics (customize the numbers)
+- Modal ID for detailed case study
+
+**About Section (lines 170-220):**
+- Line 173: Update intro paragraph
+- Lines 180-182: Modify experience paragraphs
+- Lines 192-217: Customize skills cards with your expertise
+
+**Contact (lines 226-234):**
+- Line 229: Update intro text
+- Line 231: Change email address
+- Line 232: Add your LinkedIn URL
+
+### 2. Add Your Project Images
+
+**Image Locations & Sizes:**
+
+**Hero Image** (line 45)
 ```html
-<title>Your Name - Communications & Marketing</title>
+<!-- Replace placeholder with: -->
+<img src="your-photo.jpg" alt="Your Name">
+<!-- Recommended: 600x700px, professional headshot or workspace photo -->
 ```
 
-Lines 18-23: Update hero section with your name and tagline
+**Featured Project 1 - Movember** (line 57)
 ```html
-<h1>Your Name</h1>
-<p class="tagline">Your Title/Role</p>
-<p class="subtitle">Your value proposition</p>
+<img src="movember-campaign.jpg" alt="Movember Campaign">
+<!-- Recommended: 800x600px, campaign visuals or presentation slides -->
 ```
 
-Lines 135-155: Update About section with your background
-
-Lines 166-168: Update contact links
+**Featured Project 2 - Diversity Conference** (line 80)
 ```html
-<a href="mailto:your.email@example.com" class="contact-button">Email Me</a>
-<a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-button secondary">LinkedIn</a>
+<img src="diversity-conference.jpg" alt="Diversity Conference">
+<!-- Recommended: 800x600px, event materials or branding -->
 ```
 
-### 2. Add Your Projects
-
-Each project has two parts:
-1. **Project card** (in the grid) - shows preview
-2. **Modal** (popup) - shows full details
-
-**To edit a project:**
-Find the project card section (around lines 35-75) and update:
-- Project title
-- Description
-- Tags
-- Modal ID
-
-Then find the matching modal (around lines 182-220) and update:
-- The Brief
-- My Role
-- The Approach
-- Results
-
-**To add more projects:**
-Copy an entire project-card div and modal div, give them new IDs (modal5, modal6, etc.)
-
-### 3. Add Images
-
-Replace placeholder images:
-
-Option A: Use actual images
+**Additional Projects** (lines 128, 145)
 ```html
-<div class="project-image">
-    <img src="path/to/your/image.jpg" alt="Project name">
-</div>
+<img src="project3.jpg" alt="Project Name">
+<!-- Recommended: 600x400px for each -->
 ```
 
-Then add to CSS:
+### 3. Customize Modal Content
+
+Each project has a detailed modal popup. Update in `index.html` starting at line 242:
+
+**Modal Structure:**
+- **The Brief** - Project context and objectives
+- **My Role** - Your specific contribution
+- **The Approach** - Strategy and execution
+- **Results** - Measurable outcomes
+
+### 4. Adjust Colors
+
+**In `styles.css` (lines 10-24):**
+
+To change the color scheme, update these CSS variables:
 ```css
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+--primary-color: #0a1628;     /* Main dark navy */
+--accent-color: #fbbf24;      /* Gold accent */
+--accent-light: #fcd34d;      /* Light gold */
+--bg-dark: #0f172a;           /* Dark section backgrounds */
 ```
 
-Option B: Keep placeholders but customize text
-```html
-<div class="placeholder-image">Your Custom Text</div>
-```
+**Popular alternatives:**
+- **Charcoal & Teal:** `--accent-color: #14b8a6;`
+- **Navy & Purple:** `--accent-color: #8b5cf6;`
+- **Forest & Sage:** `--primary-color: #1e3a28; --accent-color: #10b981;`
 
-### 4. Customize Colors
+### 5. Customize Section Backgrounds
 
-**In `styles.css` (lines 10-14):**
+Current layout (dark/light balance):
+- Hero: Dark navy
+- Featured Project 1: White
+- Featured Project 2: Dark navy (with padding)
+- Additional Projects: Light grey (with dark cards)
+- About Header: Dark navy
+- About Content: Light grey
+- About Skills: Dark navy
+- Contact: Dark navy
+- Footer: Darkest navy
 
-```css
---primary-color: #2c3e50;    /* Main dark color */
---accent-color: #3498db;     /* Buttons and links */
---text-dark: #2c3e50;        /* Body text */
---text-light: #7f8c8d;       /* Secondary text */
---bg-light: #f8f9fa;         /* Light backgrounds */
-```
-
-Popular professional color schemes:
-- Navy & Gold: `--primary-color: #1a2332; --accent-color: #d4af37;`
-- Forest & Sage: `--primary-color: #2d4739; --accent-color: #7c9a7f;`
-- Burgundy & Cream: `--primary-color: #5c2e2e; --accent-color: #c17878;`
-
-### 5. Test Locally
-
-1. Open `index.html` in your browser (just double-click the file)
-2. Check on mobile view (browser dev tools > responsive mode)
-3. Test all links and modals work
-4. Make sure smooth scrolling works
+To change a section background, update the CSS class background color.
 
 ## Deployment to GitHub Pages
 
-### Step 1: Create GitHub Repository
+### Initial Setup
 
-1. Go to github.com and sign in (or create account)
-2. Click "New repository"
-3. Name it: `yourname.github.io` (replace yourname with your GitHub username)
-4. Make it public
-5. Don't add README, .gitignore, or license
-6. Click "Create repository"
+1. **Create GitHub Repository**
+   - Go to github.com and sign in
+   - Click "New repository"
+   - Name it: `yourusername.github.io` (use your actual GitHub username)
+   - Make it Public
+   - Don't add README/gitignore/license
+   - Click "Create repository"
 
-### Step 2: Upload Your Files
+2. **Upload Files**
+   - Click "uploading an existing file"
+   - Drag and drop: `index.html`, `styles.css`, `script.js`
+   - Add commit message: "Initial portfolio"
+   - Click "Commit changes"
 
-**Option A: Using GitHub Web Interface (Easiest)**
-1. Click "uploading an existing file"
-2. Drag and drop: `index.html`, `styles.css`, `script.js`
-3. Scroll down, add commit message: "Initial portfolio"
-4. Click "Commit changes"
+3. **Wait & Visit**
+   - Wait 2-5 minutes for deployment
+   - Visit: `https://yourusername.github.io`
+   - Hard refresh if needed (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows)
 
-**Option B: Using Git (if you know Git)**
-```bash
-git init
-git add .
-git commit -m "Initial portfolio"
-git branch -M main
-git remote add origin https://github.com/yourusername/yourusername.github.io.git
-git push -u origin main
-```
+### Making Updates
 
-### Step 3: Enable GitHub Pages
+**Method 1: Edit on GitHub**
+1. Click on the file you want to update
+2. Click pencil icon (Edit)
+3. Make changes
+4. Scroll down, add commit message
+5. Click "Commit changes"
+6. Wait 1 minute, hard refresh your site
 
-1. Go to repository Settings
-2. Scroll to "Pages" section (left sidebar)
-3. Under "Source", select "main" branch
-4. Click Save
-5. Your site will be live at: `https://yourusername.github.io`
+**Method 2: Delete & Re-upload**
+1. Click on file → trash icon
+2. Commit deletion
+3. Click "Add file" → "Upload files"
+4. Upload new version
+5. Commit changes
 
-**Note:** It takes 2-5 minutes to go live the first time.
+### Custom Domain (Optional)
 
-### Step 4: Add Custom Domain (Optional)
-
-If you want `yourname.com` instead of `yourusername.github.io`:
+To use `yourname.com` instead of `yourusername.github.io`:
 
 1. Buy domain from Namecheap, Google Domains, etc. (£10-15/year)
-2. In domain settings, add these DNS records:
-   - A record: 185.199.108.153
-   - A record: 185.199.109.153
-   - A record: 185.199.110.153
-   - A record: 185.199.111.153
-3. In GitHub repo settings > Pages > Custom domain, enter your domain
-4. Enable "Enforce HTTPS"
+2. In domain DNS settings, add A records:
+   - `185.199.108.153`
+   - `185.199.109.153`
+   - `185.199.110.153`
+   - `185.199.111.153`
+3. In GitHub: Settings → Pages → Custom domain
+4. Enter your domain and enable "Enforce HTTPS"
 
-## Making Updates
+## Page Structure
 
-After initial deployment, to update your site:
+The portfolio follows this layout for optimal dark/light balance:
 
-1. Edit files locally
-2. Go to GitHub repository
-3. Click on the file you want to update
-4. Click pencil icon (Edit)
-5. Paste new content
-6. Scroll down, add commit message
-7. Click "Commit changes"
-8. Changes appear on your site within 1-2 minutes
+1. **Navigation** - Fixed header with smooth scrolling
+2. **Hero** - Two-column intro with stats
+3. **Featured Projects** - Large image + detailed content layouts
+4. **Additional Projects** - Card grid for more work
+5. **About** - Three-part section (dark-light-dark)
+6. **Contact** - Simple CTA with email/LinkedIn
+7. **Footer** - Minimal with copyright
+
+## Browser Support
+
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Performance
+
+- No external dependencies
+- Optimized CSS (under 100KB)
+- Fast page load (<1 second)
+- Smooth 60fps animations
 
 ## Tips
 
-- Keep content concise - people skim websites
-- Use real project examples where possible
-- Test on mobile - most people will view on phones
-- Get feedback before sharing widely
-- Update regularly with new projects
+- **Images:** Use optimized JPG/PNG files (compress before uploading)
+- **Copy:** Keep text concise - people skim portfolios
+- **Projects:** Show 4-6 best projects, not everything
+- **Updates:** Refresh content every 3-6 months
+- **Testing:** Always check on mobile before sharing
 
 ## Troubleshooting
 
-**Site not showing up?**
+**Site not loading?**
 - Wait 5 minutes after first deployment
-- Check repository name is exactly: `yourusername.github.io`
-- Check files are in root directory (not in a folder)
+- Check repository name matches: `yourusername.github.io`
+- Verify files are in root directory (not in a folder)
+
+**Old version showing?**
+- Hard refresh: Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows)
+- Clear browser cache
+- Try incognito/private window
 
 **Styling looks broken?**
-- Check file names are exactly: `styles.css` and `script.js`
-- Check capitalization matches exactly
+- Check file names exactly match: `styles.css`, `script.js`
+- Ensure files uploaded to root (not in subfolders)
+- Check console for errors (F12 → Console tab)
 
 **Modal not opening?**
+- Verify `script.js` file is present
 - Check modal IDs match between button and modal div
-- Check script.js file loaded correctly
+- Open console (F12) to check for JavaScript errors
 
-## Next Steps
+## Design Credits
 
-Once deployed, you can:
-- Share link on LinkedIn
-- Add to CV/resume
-- Use for job applications
-- Send to potential clients/employers
+Inspired by premium fintech design patterns from Chip.uk and modern portfolio best practices.
 
-Good luck!
+## Questions?
+
+This is a static site - no backend, no database, just clean HTML/CSS/JS. Perfect for showcasing your work without complexity.
+
+Good luck with your portfolio!
